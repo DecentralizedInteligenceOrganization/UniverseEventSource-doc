@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#375EAB">
+
+  <title>GOEventBus - Go Documentation Server</title>
+
+<link type="text/css" rel="stylesheet" href="../../../../lib/godoc/style.css">
+
+<script>window.initFuncs = [];</script>
+<script src="../../../../lib/godoc/jquery.js" defer></script>
+
+
+
+<script>var goVersion = "go1.21.1";</script>
+<script src="../../../../lib/godoc/godocs.js" defer></script>
+</head>
+<body>
+
+<div id='lowframe' style="position: fixed; bottom: 0; left: 0; height: 0; width: 100%; border-top: thin solid grey; background-color: white; overflow: auto;">
+...
+</div><!-- #lowframe -->
+
+<div id="topbar" class="wide"><div class="container">
+<div class="top-heading" id="heading-wide"><a href="http://localhost:6060/pkg/">Go Documentation Server</a></div>
+<div class="top-heading" id="heading-narrow"><a href="http://localhost:6060/pkg/">GoDoc</a></div>
+<a href="index.html#" id="menu-button"><span id="menu-button-arrow">&#9661;</span></a>
+<form method="GET" action="http://localhost:6060/search">
+<div id="menu">
+
+<span class="search-box"><input type="search" id="search" name="q" placeholder="Search" aria-label="Search" required><button type="submit"><span><!-- magnifying glass: --><svg width="24" height="24" viewBox="0 0 24 24"><title>submit search</title><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/><path d="M0 0h24v24H0z" fill="none"/></svg></span></button></span>
+</div>
+</form>
+
+</div></div>
+
+
+
+<div id="page" class="wide">
+<div class="container">
+
+
+  <h1>
+    Package GOEventBus
+    <span class="text-muted"></span>
+  </h1>
+
+
+
+
+
+
+
+<div id="nav"></div>
+
+
+<!--
+	Copyright 2009 The Go Authors. All rights reserved.
+	Use of this source code is governed by a BSD-style
+	license that can be found in the LICENSE file.
+-->
+<!--
+	Note: Static (i.e., not template-generated) href and id
+	attributes start with "pkg-" to make it impossible for
+	them to conflict with generated attributes (some of which
+	correspond to Go identifiers).
+-->
+
+	<script>
+	document.ANALYSIS_DATA = null;
+	document.CALLGRAPH = null;
+	</script>
+
+	
+		
+		<div id="short-nav">
+			<dl>
+			<dd><code>import "github.com/Shibbaz/GOEventBus"</code></dd>
+			</dl>
+			<dl>
+			<dd><a href="index.html#pkg-overview" class="overviewLink">Overview</a></dd>
+			<dd><a href="index.html#pkg-index" class="indexLink">Index</a></dd>
+			
+			
+			</dl>
+		</div>
+		<!-- The package's Name is printed as title by the top-level template -->
+		<div id="pkg-overview" class="toggleVisible">
+			<div class="collapsed">
+				<h2 class="toggleButton" title="Click to show Overview section">Overview ▹</h2>
+			</div>
+			<div class="expanded">
+				<h2 class="toggleButton" title="Click to hide Overview section">Overview ▾</h2>
+				
+				
+			</div>
+		</div>
+
+		<div id="pkg-index" class="toggleVisible">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Index section">Index ▹</h2>
+		</div>
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Index section">Index ▾</h2>
+
+		<!-- Table of contents for API; must be named manual-nav to turn off auto nav. -->
+			<div id="manual-nav">
+			<dl>
+			
+			
+				<dd><a href="index.html#pkg-variables">Variables</a></dd>
+			
+			
+				
+				<dd><a href="index.html#SetEventStoreDB">func SetEventStoreDB(psqlInfo string)</a></dd>
+			
+			
+				
+				<dd><a href="index.html#Dispatcher">type Dispatcher</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#Event">type Event</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#NewEvent">func NewEvent(projection any, args map[string]any) Event</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#EventStore">type EventStore</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#NewEventStore">func NewEventStore(dispatcher *Dispatcher) *EventStore</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#EventStore.Broadcast">func (eventstore *EventStore) Broadcast() error</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#EventStore.GetEvent">func (eventstore *EventStore) GetEvent() any</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#EventStore.Publish">func (eventstore *EventStore) Publish(event Event)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#EventStore.Query">func (eventstore *EventStore) Query(projection string) map[string](map[string]any)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#EventStore.Run">func (eventstore *EventStore) Run()</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#EventStore.Setup">func (eventstore *EventStore) Setup(dbname string)</a></dd>
+				
+			
+				
+				<dd><a href="index.html#EventStoreListener">type EventStoreListener</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#EventStoreNode">type EventStoreNode</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#NewEventStoreNode">func NewEventStoreNode(dispatcher Dispatcher) *EventStoreNode</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#EventStoreNode.HandleDataChannel">func (eventstore *EventStoreNode) HandleDataChannel(id string, event *Event)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#EventStoreNode.Publish">func (eventstore *EventStoreNode) Publish(event string)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#EventStoreNode.Subscribe">func (eventstore *EventStoreNode) Subscribe(event Event)</a></dd>
+				
+			
+				
+				<dd><a href="index.html#Serializer">type Serializer</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#NewSerializer">func NewSerializer() *Serializer</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Serializer.Deserialize">func (serializer *Serializer) Deserialize(data []byte) map[string]any</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#Serializer.Serialize">func (serializer *Serializer) Serialize(data map[string]any) []byte</a></dd>
+				
+			
+			
+			</dl>
+			</div><!-- #manual-nav -->
+
+		
+
+		
+			<h3>Package files</h3>
+			<p>
+			<span style="font-size:90%">
+			
+				<a href="http://localhost:6060/src/github.com/Shibbaz/GOEventBus/constructor.go">constructor.go</a>
+			
+				<a href="http://localhost:6060/src/github.com/Shibbaz/GOEventBus/dispatcher.go">dispatcher.go</a>
+			
+				<a href="http://localhost:6060/src/github.com/Shibbaz/GOEventBus/event.go">event.go</a>
+			
+				<a href="http://localhost:6060/src/github.com/Shibbaz/GOEventBus/eventstore.go">eventstore.go</a>
+			
+				<a href="http://localhost:6060/src/github.com/Shibbaz/GOEventBus/publish.go">publish.go</a>
+			
+				<a href="http://localhost:6060/src/github.com/Shibbaz/GOEventBus/serializer.go">serializer.go</a>
+			
+				<a href="http://localhost:6060/src/github.com/Shibbaz/GOEventBus/subscribe.go">subscribe.go</a>
+			
+			</span>
+			</p>
+		
+		</div><!-- .expanded -->
+		</div><!-- #pkg-index -->
+
+		
+
+		
+		
+			<h2 id="pkg-variables">Variables</h2>
+			
+				
+				<pre>var <span id="EventStoreDB">EventStoreDB</span> *<a href="http://localhost:6060/pkg/database/sql/">sql</a>.<a href="http://localhost:6060/pkg/database/sql/#DB">DB</a></pre>
+			
+		
+		
+			
+			
+			<h2 id="SetEventStoreDB">func <a href="http://localhost:6060/src/github.com/Shibbaz/GOEventBus/eventstore.go?s=631:668#L26">SetEventStoreDB</a>
+				<a class="permalink" href="index.html#SetEventStoreDB">&#xb6;</a>
+				
+				
+			</h2>
+			<pre>func SetEventStoreDB(psqlInfo <a href="http://localhost:6060/pkg/builtin/#string">string</a>)</pre>
+			<p>Setting database connection
+
+			
+			
+
+		
+		
+			
+			
+			<h2 id="Dispatcher">type <a href="http://localhost:6060/src/github.com/Shibbaz/GOEventBus/dispatcher.go?s=22:102#L1">Dispatcher</a>
+				<a class="permalink" href="index.html#Dispatcher">&#xb6;</a>
+				
+				
+			</h2>
+			
+			<pre>type Dispatcher map[<a href="http://localhost:6060/pkg/builtin/#string">string</a>]func(*map[<a href="http://localhost:6060/pkg/builtin/#string">string</a>]<a href="http://localhost:6060/pkg/builtin/#any">any</a>) (map[<a href="http://localhost:6060/pkg/builtin/#string">string</a>]interface{}, <a href="http://localhost:6060/pkg/builtin/#error">error</a>)</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="Event">type <a href="http://localhost:6060/src/github.com/Shibbaz/GOEventBus/event.go?s=78:165#L1">Event</a>
+				<a class="permalink" href="index.html#Event">&#xb6;</a>
+				
+				
+			</h2>
+			
+			<pre>type Event struct {
+<span id="Event.Id"></span>    Id         <a href="http://localhost:6060/pkg/builtin/#string">string</a>
+<span id="Event.Projection"></span>    Projection <a href="http://localhost:6060/pkg/builtin/#any">any</a>
+<span id="Event.Args"></span>    Args       map[<a href="http://localhost:6060/pkg/builtin/#string">string</a>]<a href="http://localhost:6060/pkg/builtin/#any">any</a>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="NewEvent">func <a href="http://localhost:6060/src/github.com/Shibbaz/GOEventBus/event.go?s=191:247#L6">NewEvent</a>
+					<a class="permalink" href="index.html#NewEvent">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func NewEvent(projection <a href="http://localhost:6060/pkg/builtin/#any">any</a>, args map[<a href="http://localhost:6060/pkg/builtin/#string">string</a>]<a href="http://localhost:6060/pkg/builtin/#any">any</a>) <a href="index.html#Event">Event</a></pre>
+				<p>Event constructor
+
+				
+				
+			
+
+			
+		
+			
+			
+			<h2 id="EventStore">type <a href="http://localhost:6060/src/github.com/Shibbaz/GOEventBus/eventstore.go?s=361:567#L13">EventStore</a>
+				<a class="permalink" href="index.html#EventStore">&#xb6;</a>
+				
+				
+			</h2>
+			
+			<pre>type EventStore struct {
+<span id="EventStore.Dispatcher"></span>    Dispatcher *<a href="index.html#Dispatcher">Dispatcher</a>
+<span id="EventStore.Done"></span>    Done       chan <a href="http://localhost:6060/pkg/builtin/#bool">bool</a>
+
+<span id="EventStore.Wg"></span>    Wg <a href="http://localhost:6060/pkg/sync/">sync</a>.<a href="http://localhost:6060/pkg/sync/#WaitGroup">WaitGroup</a>
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="NewEventStore">func <a href="http://localhost:6060/src/github.com/Shibbaz/GOEventBus/eventstore.go?s=809:863#L35">NewEventStore</a>
+					<a class="permalink" href="index.html#NewEventStore">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func NewEventStore(dispatcher *<a href="index.html#Dispatcher">Dispatcher</a>) *<a href="index.html#EventStore">EventStore</a></pre>
+				<p>Eventstore constructor
+
+				
+				
+			
+
+			
+				
+				<h3 id="EventStore.Broadcast">func (*EventStore) <a href="http://localhost:6060/src/github.com/Shibbaz/GOEventBus/eventstore.go?s=2498:2545#L103">Broadcast</a>
+					<a class="permalink" href="index.html#EventStore.Broadcast">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (eventstore *<a href="index.html#EventStore">EventStore</a>) Broadcast() <a href="http://localhost:6060/pkg/builtin/#error">error</a></pre>
+				<p>Broadcasts every published event
+
+				
+				
+				
+			
+				
+				<h3 id="EventStore.GetEvent">func (*EventStore) <a href="http://localhost:6060/src/github.com/Shibbaz/GOEventBus/eventstore.go?s=2263:2307#L93">GetEvent</a>
+					<a class="permalink" href="index.html#EventStore.GetEvent">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (eventstore *<a href="index.html#EventStore">EventStore</a>) GetEvent() <a href="http://localhost:6060/pkg/builtin/#any">any</a></pre>
+				<p>Get event from sync.Pool
+
+				
+				
+				
+			
+				
+				<h3 id="EventStore.Publish">func (*EventStore) <a href="http://localhost:6060/src/github.com/Shibbaz/GOEventBus/eventstore.go?s=2371:2421#L98">Publish</a>
+					<a class="permalink" href="index.html#EventStore.Publish">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (eventstore *<a href="index.html#EventStore">EventStore</a>) Publish(event <a href="index.html#Event">Event</a>)</pre>
+				<p>Subscribing event
+
+				
+				
+				
+			
+				
+				<h3 id="EventStore.Query">func (*EventStore) <a href="http://localhost:6060/src/github.com/Shibbaz/GOEventBus/eventstore.go?s=1212:1294#L52">Query</a>
+					<a class="permalink" href="index.html#EventStore.Query">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (eventstore *<a href="index.html#EventStore">EventStore</a>) Query(projection <a href="http://localhost:6060/pkg/builtin/#string">string</a>) map[<a href="http://localhost:6060/pkg/builtin/#string">string</a>](map[<a href="http://localhost:6060/pkg/builtin/#string">string</a>]<a href="http://localhost:6060/pkg/builtin/#any">any</a>)</pre>
+				<p>querying database for events of projections&apos;
+
+				
+				
+				
+			
+				
+				<h3 id="EventStore.Run">func (*EventStore) <a href="http://localhost:6060/src/github.com/Shibbaz/GOEventBus/eventstore.go?s=2956:2991#L119">Run</a>
+					<a class="permalink" href="index.html#EventStore.Run">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (eventstore *<a href="index.html#EventStore">EventStore</a>) Run()</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="EventStore.Setup">func (*EventStore) <a href="http://localhost:6060/src/github.com/Shibbaz/GOEventBus/eventstore.go?s=1904:1954#L78">Setup</a>
+					<a class="permalink" href="index.html#EventStore.Setup">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (eventstore *<a href="index.html#EventStore">EventStore</a>) Setup(dbname <a href="http://localhost:6060/pkg/builtin/#string">string</a>)</pre>
+				<p>Setting up database and creating table
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="EventStoreListener">type <a href="http://localhost:6060/src/github.com/Shibbaz/GOEventBus/eventstore.go?s=111:200#L2">EventStoreListener</a>
+				<a class="permalink" href="index.html#EventStoreListener">&#xb6;</a>
+				
+				
+			</h2>
+			
+			<pre>type EventStoreListener struct {
+<span id="EventStoreListener.OnDescription"></span>    OnDescription chan <a href="http://localhost:6060/pkg/builtin/#string">string</a>
+<span id="EventStoreListener.OnBye"></span>    OnBye         chan <a href="http://localhost:6060/pkg/builtin/#bool">bool</a>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="EventStoreNode">type <a href="http://localhost:6060/src/github.com/Shibbaz/GOEventBus/eventstore.go?s=202:357#L6">EventStoreNode</a>
+				<a class="permalink" href="index.html#EventStoreNode">&#xb6;</a>
+				
+				
+			</h2>
+			
+			<pre>type EventStoreNode struct {
+<span id="EventStoreNode.Listner"></span>    Listner <a href="index.html#EventStoreListener">EventStoreListener</a>
+<span id="EventStoreNode.DC"></span>    DC      webrtc.<a href="index.html#DataChannel">DataChannel</a>
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="NewEventStoreNode">func <a href="http://localhost:6060/src/github.com/Shibbaz/GOEventBus/constructor.go?s=98:159#L1">NewEventStoreNode</a>
+					<a class="permalink" href="index.html#NewEventStoreNode">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func NewEventStoreNode(dispatcher <a href="index.html#Dispatcher">Dispatcher</a>) *<a href="index.html#EventStoreNode">EventStoreNode</a></pre>
+				<p>EventStoreNode constructor
+
+				
+				
+			
+
+			
+				
+				<h3 id="EventStoreNode.HandleDataChannel">func (*EventStoreNode) <a href="http://localhost:6060/src/github.com/Shibbaz/GOEventBus/publish.go?s=161:237#L4">HandleDataChannel</a>
+					<a class="permalink" href="index.html#EventStoreNode.HandleDataChannel">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (eventstore *<a href="index.html#EventStoreNode">EventStoreNode</a>) HandleDataChannel(id <a href="http://localhost:6060/pkg/builtin/#string">string</a>, event *<a href="index.html#Event">Event</a>)</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="EventStoreNode.Publish">func (*EventStoreNode) <a href="http://localhost:6060/src/github.com/Shibbaz/GOEventBus/publish.go?s=2295:2350#L83">Publish</a>
+					<a class="permalink" href="index.html#EventStoreNode.Publish">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (eventstore *<a href="index.html#EventStoreNode">EventStoreNode</a>) Publish(event <a href="http://localhost:6060/pkg/builtin/#string">string</a>)</pre>
+				<p>Sending bytes over datachannels to publish events and send it in database
+Serializing data before inserting it to database
+
+				
+				
+				
+			
+				
+				<h3 id="EventStoreNode.Subscribe">func (*EventStoreNode) <a href="http://localhost:6060/src/github.com/Shibbaz/GOEventBus/subscribe.go?s=161:217#L1">Subscribe</a>
+					<a class="permalink" href="index.html#EventStoreNode.Subscribe">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (eventstore *<a href="index.html#EventStoreNode">EventStoreNode</a>) Subscribe(event <a href="index.html#Event">Event</a>)</pre>
+				<p>Usecase of datachannel, event is encoded into bytes and send to another peer (look into Publish func)
+
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="Serializer">type <a href="http://localhost:6060/src/github.com/Shibbaz/GOEventBus/serializer.go?s=74:121#L1">Serializer</a>
+				<a class="permalink" href="index.html#Serializer">&#xb6;</a>
+				
+				
+			</h2>
+			
+			<pre>type Serializer struct {
+    <span class="comment">// contains filtered or unexported fields</span>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="NewSerializer">func <a href="http://localhost:6060/src/github.com/Shibbaz/GOEventBus/serializer.go?s=149:181#L4">NewSerializer</a>
+					<a class="permalink" href="index.html#NewSerializer">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func NewSerializer() *<a href="index.html#Serializer">Serializer</a></pre>
+				<p>Serializer constructor
+
+				
+				
+			
+
+			
+				
+				<h3 id="Serializer.Deserialize">func (*Serializer) <a href="http://localhost:6060/src/github.com/Shibbaz/GOEventBus/serializer.go?s=536:605#L21">Deserialize</a>
+					<a class="permalink" href="index.html#Serializer.Deserialize">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (serializer *<a href="index.html#Serializer">Serializer</a>) Deserialize(data []<a href="http://localhost:6060/pkg/builtin/#byte">byte</a>) map[<a href="http://localhost:6060/pkg/builtin/#string">string</a>]<a href="http://localhost:6060/pkg/builtin/#any">any</a></pre>
+				<p>Deserialize deserializes data []byte to map[string]any
+
+				
+				
+				
+			
+				
+				<h3 id="Serializer.Serialize">func (*Serializer) <a href="http://localhost:6060/src/github.com/Shibbaz/GOEventBus/serializer.go?s=270:337#L11">Serialize</a>
+					<a class="permalink" href="index.html#Serializer.Serialize">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func (serializer *<a href="index.html#Serializer">Serializer</a>) Serialize(data map[<a href="http://localhost:6060/pkg/builtin/#string">string</a>]<a href="http://localhost:6060/pkg/builtin/#any">any</a>) []<a href="http://localhost:6060/pkg/builtin/#byte">byte</a></pre>
+				<p>Serialize serializes data into []byte
+
+				
+				
+				
+			
+		
+	
+
+	
+
+
+
+
+
+
+
+<div id="footer">
+Build version go1.21.1.<br>
+Except as <a href="https://developers.google.com/site-policies#restrictions">noted</a>,
+the content of this page is licensed under the
+Creative Commons Attribution 3.0 License,
+and code is licensed under a <a href="http://localhost:6060/LICENSE">BSD license</a>.<br>
+<a href="https://golang.org/doc/tos.html">Terms of Service</a> |
+<a href="https://www.google.com/intl/en/policies/privacy/">Privacy Policy</a>
+</div>
+
+</div><!-- .container -->
+</div><!-- #page -->
+</body>
+</html>
